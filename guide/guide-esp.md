@@ -24,7 +24,7 @@ Esto es como decirle al servidor: *"oye, dame info sobre el Bananen-Smoothie"*
 
 **3. `fetch()` manda esa petición al servidor en segundo plano**
 
-Sin recargar la página. Mientras espera la respuesta, el usuario puede seguir viendo la web. Esto es exactamente lo que es **AJAX** — comunicación asíncrona.
+Sin recargar la página. Mientras espera la respuesta, el usuario puede seguir viendo la web. Esto es exactamente lo que es **AJAX** - comunicación asíncrona.
 
 **4. El servidor responde con un JSON**
 
@@ -59,7 +59,7 @@ Porque así funciona **prácticamente toda la web moderna**:
 | Booking.com | Busca hoteles en tiempo real |
 | Tu Smooflix | Pide datos de smoothies a una API |
 
-La diferencia con páginas estáticas es que los datos **no están escritos en el HTML** — vienen de fuera, en tiempo real, según lo que pide el usuario.
+La diferencia con páginas estáticas es que los datos **no están escritos en el HTML** - vienen de fuera, en tiempo real, según lo que pide el usuario.
 
 ---
 
