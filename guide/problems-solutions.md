@@ -86,7 +86,7 @@ After removing the white background from `.result-section`, the image appeared i
 The fix being used to remove the black background from the PNG was `mix-blend-mode: multiply` with a white parent background. This technique works by blending black pixels into the white background, making them invisible. When the parent background was changed to `transparent`, the blend mode had nothing to work against and the white box from the image wrapper became visible instead.
 
 **Root cause:**
-The image itself has a solid black background baked in — it has no transparent alpha channel. The real fix is to remove the background from the image file using a tool like [remove.bg](https://www.remove.bg) or Photoshop.
+The image itself has a solid black background baked in - it has no transparent alpha channel. The real fix is to remove the background from the image file using a tool like [remove.bg](https://www.remove.bg) or Photoshop.
 
 **Temporary CSS fix:**
 Remove the white background and blend mode from the image wrapper:
@@ -120,7 +120,7 @@ Pasting the API URL directly into the browser returned a valid JSON response, bu
 This is a **CORS (Cross-Origin Resource Sharing)** issue. When a browser makes a `fetch()` request from a page, the server must explicitly allow it. Opening the file via `file://` (double-clicking) blocks fetch entirely. Even with Live Server, if the API server does not send the right CORS headers, the browser will block the response.
 
 **Solution:**
-Always open the project through **Live Server** (`http://127.0.0.1:5500`) instead of double-clicking the file. If the API still blocks requests, that is a server-side restriction — the client-side code cannot fix it.
+Always open the project through **Live Server** (`http://127.0.0.1:5500`) instead of double-clicking the file. If the API still blocks requests, that is a server-side restriction - the client-side code cannot fix it.
 
 ```js
 // To debug, check the browser console for messages like:
