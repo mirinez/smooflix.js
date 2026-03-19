@@ -1,0 +1,286 @@
+/* 
+   style.css - Smooflix | Die Smoothie-Suche
+   Míriam Domínguez Martínez - 19.03.2026
+*/
+
+/* ================================================================
+   0. FONTS
+*/
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ================================================================
+   1. CSS CUSTOM PROPERTIES
+*/
+
+:root {
+  --white:          #FFFFFF;
+  --black:          #000000;
+  --gray-light:     #EEEEEE;
+  --gray-mid:       #D3D3D3;
+  --accent:         #7B68EE;
+
+  --gradient-hero:  linear-gradient(135deg, #FF6B6B 0%, #FFB347 100%);
+  --gradient-btn:   linear-gradient(135deg, #8B7ED8 0%, #7C3AED 100%);
+  --gradient-badge: linear-gradient(135deg, #FFB347 0%, #FF67C0 100%);
+
+  --shadow:         2px 2px 2px #585757;
+  --font:           'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================================================
+   2. PAGE
+*/
+
+body {
+  font-family: var(--font);
+  background-color: var(--accent);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 60px;
+}
+
+/* ================================================================
+   3. APP CARD
+*/
+
+.app-card {
+  width: 100%;
+  max-width: 500px;            /* narrow card as in the template */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* ================================================================
+   4. CARD HEADER
+*/
+
+.card-header {
+  background: var(--gradient-hero);
+  text-align: center;
+  padding: 30px 24px 24px;
+}
+
+.card-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: var(--shadow);
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  font-size: 13.5px;
+  color: var(--white);
+  opacity: 0.93;
+  margin-top: 4px;
+}
+
+/* ================================================================
+   5. CARD BODY
+*/
+
+.card-body {
+  background: var(--gray-light);
+  padding: 24px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ================================================================
+   6. SEARCH BAR
+*/
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 11px 18px;
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 13.5px;
+  background: var(--white);
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar input::placeholder {
+  color: #bbb;
+}
+
+.search-bar input:focus {
+  border-color: var(--accent);
+}
+
+.search-bar button {
+  padding: 11px 20px;
+  background: var(--gradient-btn);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.search-bar button:hover {
+  opacity: 0.85;
+}
+
+/* ================================================================
+   7. RESULT SECTION
+*/
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  padding: 6px 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.result-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ================================================================
+   8. SMOOTHIE IMAGE
+*/
+
+.image-wrapper {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ================================================================
+   9. FLAVOR BADGE
+*/
+
+.flavor-badge {
+  background: var(--gradient-badge);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 50px;
+  display: inline-block;
+  text-shadow: var(--shadow);
+}
+
+/* ================================================================
+   10. INGREDIENTS LIST
+*/
+
+.result-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 4px;
+}
+
+.ingredient-list {
+  list-style: none;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ingredient-list li {
+  background: var(--white);
+  border: 1.5px solid var(--gray-mid);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 13.5px;
+  text-align: left;
+  color: var(--black);
+}
+
+/* ================================================================
+   11. ERROR MESSAGE
+*/
+
+.error-msg {
+  color: #cc2222;
+  font-size: 13.5px;
+  display: none;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+/* ============================================
+   12. FOOTER
+*/
+
+footer {
+    background-color: var(--gray-light);
+    color: #666666;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p {
+    color: #666666;
+    margin: 0;
+}

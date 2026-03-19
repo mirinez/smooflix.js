@@ -1,0 +1,81 @@
+<!-- 
+   index.html - Smooflix | Die Smoothie-Suche
+   Míriam Domínguez Martínez - 19.03.2026
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- ============================================================
+       META & PAGE SETUP
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smooflix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       APP CARD — floating centered card over the purple background
+  -->
+  <div class="app-card">
+
+    <!-- ---- HEADER: orange-to-yellow gradient ---- -->
+    <header class="card-header">
+      <h1>Smooflix</h1>
+      <p class="tagline">Entdecke deinen perfekte Smoothie</p>
+    </header>
+
+    <!-- ---- BODY: light grey area ---- -->
+    <div class="card-body">
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" id="smoothieInput" placeholder="Smoothie Name" />
+        <button id="generateBtn">Smoothie generieren</button>
+      </div>
+
+      <!-- ============================================================
+           RESULT SECTION — white inner card, always visible with placeholder
+      -->
+      <div class="result-section" id="resultCard">
+
+        <h2 id="smoothieName">Smoothie</h2>
+
+        <div class="image-wrapper">
+          <img id="smoothieImage" src="img/smoothie.png" alt="Smoothie" />
+        </div>
+
+        <span class="flavor-badge" id="smoothieFlavor">Fruchtig &amp; Erfrischend</span>
+
+        <h3>Zutaten</h3>
+        <ul id="ingredientList" class="ingredient-list">
+          <li>Banane</li>
+          <li>Erdbeere</li>
+          <li>Joghurt</li>
+          <li>Honig</li>
+          <li>Eiswürfel</li>
+        </ul>
+
+      </div>
+
+      <!-- Error message — hidden by default -->
+      <p class="error-msg" id="errorMsg"></p>
+
+    </div>
+    <!-- ============================================
+       FOOTER
+    -->
+    <footer>
+      <p>&copy; 2026 Smooflix - Míriam Domínguez Martínez | DBE Academy</p>
+    </footer>
+  </div>
+
+  <!-- ============================================================
+       JAVASCRIPT LINK
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
+
