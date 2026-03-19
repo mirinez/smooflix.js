@@ -33,7 +33,6 @@ Dieses Projekt ist eine interaktive Smoothie-Such-App, Smooflix, erstellt mit HT
 │   └── Poppins-Bold.ttf
 └── img/
     └── smoothie.png
-└── README.md
 ```
 
 ---
