@@ -24,7 +24,7 @@ This is like telling the server: *"hey, give me info about the Bananen-Smoothie"
 
 **3. `fetch()` sends that request to the server in the background**
 
-Without reloading the page. While waiting for the response, the user can keep interacting with the page. This is exactly what **AJAX** is — asynchronous communication.
+Without reloading the page. While waiting for the response, the user can keep interacting with the page. This is exactly what **AJAX** is - asynchronous communication.
 
 **4. The server responds with JSON**
 
@@ -59,7 +59,7 @@ Because this is how **almost every modern website** works:
 | Booking.com | Searches hotels in real time |
 | Your Smooflix | Requests smoothie data from an API |
 
-The difference from static pages is that the data is **not written in the HTML** — it comes from outside, in real time, based on what the user asks for.
+The difference from static pages is that the data is **not written in the HTML** - it comes from outside, in real time, based on what the user asks for.
 
 ---
 
