@@ -1,6 +1,6 @@
 /* 
    script.js - Smooflix | Die Smoothie-Suche
-   Míriam Domínguez Martínez - 19.03.2026
+   Míriam Domínguez Martínez - 23.03.2026
 */
 
 /* ================================================================
@@ -69,6 +69,8 @@ function fetchSmoothie() {
 
       // Hand off to the render function
       renderSmoothie(data);
+        localStorage.setItem('lastSmoothieInput', userInput);
+        localStorage.setItem('lastSmoothieData', JSON.stringify(data));
     })
     .catch(function (error) {
       console.error('Fetch error:', error);
@@ -129,3 +131,18 @@ smoothieInput.addEventListener('keydown', function (e) {
     fetchSmoothie();
   }
 });
+
+/* ================================================================
+   STEP 7: RESTORE LAST SEARCH ON PAGE LOAD
+*/
+
+
+// Read localStorage on startup and restore last state
+const savedInput = localStorage.getItem('lastSmoothieInput');
+const savedData  = localStorage.getItem('lastSmoothieData');
+
+if (savedInput && savedData) {
+  // Restore the search field and re-render the last result
+  smoothieInput.value = savedInput;
+  renderSmoothie(JSON.parse(savedData));
+}
