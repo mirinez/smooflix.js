@@ -1,6 +1,6 @@
 ## Smooflix – Hausaufgabe
 **Autorin:** Míriam Domínguez Martínez  
-**Datum:** 19.03.2026  
+**Datum:** 23.03.2026  
 **Kurs:** Full Stack Web Development - DBE Academy  
 **Thema:** JavaScript & AJAX - Die Smoothie-Suche
 
